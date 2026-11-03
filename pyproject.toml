@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aethos-eval-harness"
+version = "1.0.0"
+authors = [{ name = "Luminia Sovereign Systems", email = "research@luminiaproductions.com" }]
+description = "Reproducible Benchmark Harness for Measuring Frontier Model False Refusal Rates and Over-Alignment"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.28.0",
+    "tabulate>=0.9.0",
+]
+
+[project.scripts]
+aethos-eval = "aethos_eval.cli:main"
