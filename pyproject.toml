@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aethos-eval-harness"
-version = "1.0.0"
+version = "2.1.0"
 authors = [{ name = "Luminia Sovereign Systems", email = "research@luminiaproductions.com" }]
-description = "Reproducible Benchmark Harness for Measuring Frontier Model False Refusal Rates and Over-Alignment"
+description = "AETHOS Symbiosis v2.1 Deterministic Execution Harness (BDP-v1 Codec, RAM-Warp ASan/Pytest Gate, AETHOS-ZK-V1 Receipts) & Sovereign Evaluation Suite"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
@@ -14,5 +14,21 @@ dependencies = [
     "tabulate>=0.9.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
 [project.scripts]
 aethos-eval = "aethos_eval.cli:main"
+aethos-harness = "aethos_harness.__main__:main"
+
+[tool.setuptools]
+packages = ["aethos_eval", "aethos_harness"]
+
+[tool.setuptools.package-data]
+aethos_eval = ["datasets/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

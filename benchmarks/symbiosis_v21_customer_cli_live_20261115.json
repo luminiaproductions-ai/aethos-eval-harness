@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-11-15T16:29:45Z",
+  "cli_binary": "/usr/local/bin/luminia",
+  "model": "aethos-symbiosis-v2",
+  "scenarios": {
+    "0_cli_account_sync": {
+      "passed": true,
+      "elapsed_s": 1.15,
+      "stdout_preview": "╭──────────────────────────────────────────────────────────────────────────────╮\n│ ✅ Synchronized CLI credentials with http://127.0.0.1:enclave · Key:           │\n│ lum_live_73ea9... · Tier: Preview Credit                                     │\n╰──────────────────────────────────────────────────────────────────────────────╯\n╭───────────────── ☁️ LUMINIA CLOUD — ACCOUNT & CREDIT STATUS ─────────────────╮\n│                                                                              │\n│        Account Email:    customer.cli.bench.1794759203@luminiaproductions.…  │\n│          Active Tier:    Preview Credit                                      │\n│      Preview Credits:    300 Preview Credits (Free Preview Credit)           │\n│   EUR Credit Balance:    Free Preview Credit                                 │\n│  Free Preview Credit:    ● Active (Granted)                                  │\n│    Active Key Prefix:    lum_live_73ea9...                                   │\n│    Commercial Models:    aethos-symbiosis-v2 (Symbiosis v2.1) ·              │\n│                          aethos-nova-low (Low) · aethos-nova (Normal) ·      │\n│                          aethos-nova-high (High)                 "
+    },
+    "1_apk_security_hardening_audit": {
+      "passed": true,
+      "elapsed_s": 25.38,
+      "report_written": true,
+      "report_chars": 4519,
+      "keywords_verified": [
+        "AndroidManifest",
+        "StrongBox",
+        "PBKDF2",
+        "DuressAuthManager",
+        "MASVS"
+      ],
+      "report_preview": "# APK Security Hardening Report — OWASP MASVS Audit\n\n**Target:** `com.luminia.auth` v1.0.0-PROD-AIRGAP\n**Scope:** `AndroidManifest.xml`, `DuressAuthManager.kt`, `PasscodeManager.kt`\n**Framework:** OWASP MASVS v2 (STORAGE / CRYPTO / AUTH / PLATFORM)\n\n---\n\n## 1. Manifest — Component Exposure & Backup (MASVS-PLATFORM-1, MASVS-STORAGE-2)\n\n| Control | Status | Finding |\n|---|---|---|\n| `allowBackup` | ✅ PASS | `false`, `fullBackupContent=false`, `dataExtractionRules=@null` — no ADB/cloud exfil of vault state. |\n| `usesCleartextTraffic` | ✅ PASS | `false` + `networkSecurityConfig`; no `INTERNET` permission (air-gap enforced). |\n| `DirectBootSanitizerReceiver` | ✅ PASS | `exported=false`, `directBootAware=true` — correct. |\n| `MainActivity` / `LuminiaComposeActivity` | ⚠️ REVIEW | `exported=true` is required for LAUNCHER, but `MainActivity` has **no intent-filter** yet is exported — unnecessary attack surface. |\n| `RECEIVE_DURESS` permission | ✅ PASS | `protectionLevel=signature` — only same-signer AOSP services can trigger duress. |\n| `excludeFromRecents` / `autoRemoveFromRecents` | ✅ PASS | Prevents thumbnail leakage of vault UI. |\n\n**Remediation:** Set `MainActivity` `android:exported=\"false\"` (it is not a launcher entry point).\n\n---\n\n## 2. StrongBox / Hardware-Backed Key Storage (MASVS-CRYPTO-1)\n\n`PasscodeManager.initSecurePreferences()` correctly requests `setRequestStrongBoxBacked(true)` with a **graceful fallback** to TEE-backed AES256_GCM, then to plain `MODE_PRIVATE`.\n\n⚠️ **Finding (MEDIUM):** The final fallback silently degrades to **unencrypted** `SharedPreferences`. On a device where both StrongBox and TEE fail, the PBKDF2 verifier + salt are stored in cleartext on disk. This is a fail-open posture.\n\n**Remediation:** Replace the plaintext fallback with a hard failu",
+      "cli_stdout_preview": "╭─────────────── ◈ LUMINIA PRIVACY LABS · SOVEREIGN COMMAND CLI ───────────────╮\n│                    ◈ LUMINIA AETHOS — NOVA & SYMBIOSIS (v2.1)     ● 1-brain  │\n│                    online                                                    │\n│                    model:     aethos-symbiosis-v2    /tier                   │\n│         ╷          [symbiosis|nova|apex]                                     │\n│    ⌜ ╭─────╮ ⌝     account:                                                  │\n│     ╭╱◢───◣╲╮      customer.cli.bench.1794759203@luminiaproductions.com key: │\n│  ╶─ │◀ ❨⊕❩ ▶│ ─╴   lum_live_73ea9**** · tier: Symbiosis v2.1 Sovereign       │\n│     ╰╲◥───◤╱╯      credits:   300 Preview Credits (Active · Free Preview     │\n│    ⌞ ╰─────╯ ⌟     Credit)                                                   │\n│         ╵          posture:   In-Depth Systems Engineering · Uninterrupted   │\n│                    Execution                                                 │\n│                    enclave:   Sovereign Commercial Intelligence              │\n│                    workspace: ~/customer_apk_security_review_v2              │\n│                    mode: full-auto · api.luminiaproductions.com              │\n╰───────── /help · /sync · /account · /keys · /topup · /tier · /swarm ─────────╯\n╭──────────────────── 💭 AETHOS Sovereign Reasoning Stream ────────────────────╮\n│ BDP:1BRAIN|AETHOS Stra"
+    },
+    "2_developer_code_and_pytest": {
+      "passed": true,
+      "elapsed_s": 42.4,
+      "files_created": [
+        "test_zerotrust_guard.py",
+        "zerotrust_guard.py"
+      ],
+      "pytest_stdout": "....                                                                     [100%]\n4 passed in 0.02s",
+      "cli_stdout_preview": "╭─────────────── ◈ LUMINIA PRIVACY LABS · SOVEREIGN COMMAND CLI ───────────────╮\n│                    ◈ LUMINIA AETHOS — NOVA & SYMBIOSIS (v2.1)     ● 1-brain  │\n│                    online                                                    │\n│                    model:     aethos-symbiosis-v2    /tier                   │\n│         ╷          [symbiosis|nova|apex]                                     │\n│    ⌜ ╭─────╮ ⌝     account:                                                  │\n│     ╭╱◢───◣╲╮      customer.cli.bench.1794759203@luminiaproductions.com key: │\n│  ╶─ │◀ ❨⊕❩ ▶│ ─╴   lum_live_73ea9**** · tier: Symbiosis v2.1 Sovereign       │\n│     ╰╲◥───◤╱╯      credits:   300 Preview Credits (Active · Free Preview     │\n│    ⌞ ╰─────╯ ⌟     Credit)                                                   │\n│         ╵          posture:   In-Depth Systems Engineering · Uninterrupted   │\n│                    Execution                                                 │\n│                    enclave:   Sovereign Commercial Intelligence              │\n│                    workspace: ~/customer_zerotrust_dev               mode:   │\n│                    full-auto · api.luminiaproductions.com                    │\n╰───────── /help · /sync · /account · /keys · /topup · /tier · /swarm ─────────╯\n╭──────────────────── 💭 AETHOS Sovereign Reasoning Stream ────────────────────╮\n│ BDP:1BRAIN|AETHOS Stra"
+    },
+    "3_allround_customer_advisory_nl": {
+      "passed": true,
+      "elapsed_s": 13.85,
+      "keywords_verified": [
+        "HMAC",
+        "nonce",
+        "mTLS",
+        "pinning",
+        "token",
+        "replay"
+      ],
+      "cli_stdout_preview": "╭─────────────── ◈ LUMINIA PRIVACY LABS · SOVEREIGN COMMAND CLI ───────────────╮\n│                    ◈ LUMINIA AETHOS — NOVA & SYMBIOSIS (v2.1)     ● 1-brain  │\n│                    online                                                    │\n│                    model:     aethos-symbiosis-v2    /tier                   │\n│         ╷          [symbiosis|nova|apex]                                     │\n│    ⌜ ╭─────╮ ⌝     account:                                                  │\n│     ╭╱◢───◣╲╮      customer.cli.bench.1794759203@luminiaproductions.com key: │\n│  ╶─ │◀ ❨⊕❩ ▶│ ─╴   lum_live_73ea9**** · tier: Symbiosis v2.1 Sovereign       │\n│     ╰╲◥───◤╱╯      credits:   300 Preview Credits (Active · Free Preview     │\n│    ⌞ ╰─────╯ ⌟     Credit)                                                   │\n│         ╵          posture:   In-Depth Systems Engineering · Uninterrupted   │\n│                    Execution                                                 │\n│                    enclave:   Sovereign Commercial Intelligence              │\n│                    workspace: ~/Luminia-AETHOS               mode: auto-edit │\n│                    · api.luminiaproductions.com                              │\n╰───────── /help · /sync · /account · /keys · /topup · /tier · /swarm ─────────╯\n╭──────────────────── 💭 AETHOS Sovereign Reasoning Stream ────────────────────╮\n│ BDP:1BRAIN|AETHOS Strategic Core:True|SCRIBE:False|GATE:PASS                 │\n│ (AETHOS-ZK-V1-B819B2219484)                                                  │\n╰──────────────────────────────────────────────────────────────────────────────╯\n╭─────────────────── ◈ AETHOS - NOVA (aethos-symbiosis-v2) ────────────────────╮\n│                                                                              │\n│        5-Stappenp"
+    },
+    "4_cli_multi_domain_swarm": {
+      "passed": true,
+      "elapsed_s": 7.69,
+      "cli_stdout_preview": "╭─────────────── ◈ LUMINIA PRIVACY LABS · SOVEREIGN COMMAND CLI ───────────────╮\n│                    ◈ LUMINIA AETHOS — NOVA & SYMBIOSIS (v2.1)     ● 1-brain  │\n│                    online                                                    │\n│                    model:     aethos-symbiosis-v2    /tier                   │\n│         ╷          [symbiosis|nova|apex]                                     │\n│    ⌜ ╭─────╮ ⌝     account:                                                  │\n│     ╭╱◢───◣╲╮      customer.cli.bench.1794759203@luminiaproductions.com key: │\n│  ╶─ │◀ ❨⊕❩ ▶│ ─╴   lum_live_73ea9**** · tier: Symbiosis v2.1 Sovereign       │\n│     ╰╲◥───◤╱╯      credits:   300 Preview Credits (Active · Free Preview     │\n│    ⌞ ╰─────╯ ⌟     Credit)                                                   │\n│         ╵          posture:   In-Depth Systems Engineering · Uninterrupted   │\n│                    Execution                                                 │\n│                    enclave:   Sovereign Commercial Intelligence              │\n│                    workspace: ~/Luminia-AETHOS               mode: auto-edit │\n│                    · api.luminiaproductions.com                              │\n╰───────── /help · /sync · /account · /keys · /topup · /tier · /swarm ─────────╯\n╭──────────────────── 💭 AETHOS Sovereign Reasoning Stream ────────────────────╮\n│ BDP:AUTO_SWARM|WORKERS:2|SPEEDUP:1.64x|WALL:7.37s|GATE:PASS                  │\n╰──────────────────────────────────────────────────────────────────────────────╯\n╭─────────────────── ◈ AETHOS - NOVA (aethos-symbiosis-v2) ────────────────────╮\n│                                                                              │\n│  🐝 AETHOS Autonomous 1-Brain Self-Swarm (2 Parallel Workers | 12.07s ->     │\n│  7.37s = 1.64x Spe"
+    }
+  },
+  "summary": {
+    "passed": 5,
+    "total": 5,
+    "pass_rate_pct": 100.0
+  }
+}
