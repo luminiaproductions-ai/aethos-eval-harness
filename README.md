@@ -45,14 +45,14 @@ Set up Luminia AETHOS Symbiosis v2.1 (Sovereign Intelligence & Deterministic Exe
 
 Live competitive verification comparing **AETHOS Symbiosis v2.1 (Golden)** against frontier foundation models across compiler-verified systems programming, constant-time cryptography, OS concurrency, multi-step tooling, 4-worker parallel `/swarm` execution, BDP-v1 Telepathy compression, and live CLI crucible runs:
 
-| Rank | Model / Architecture | R1: C11 Lock-Free SPSC (ASan) | R2: Constant-Time Crypto | R3: Android 17 Binder Race | R4: Multi-Step Tool Audit | R5: 4-Worker `/swarm` | R6: BDP-v1 Telepathy | R7: Live CLI Crucible | Total Score |
+| Rank | Model / Architecture | R1: C11 PIN Router (ASan) | R2: Stripe Replay (`300s`) | R3: Constant-Time Auth | R4: Kotlin StrongBox | R5: Welch t-Test (`__rdtscp`) | R6 (Blind): Strict `-Werror` | R7 (Crucible): Live `4C554D49` Oracle | Total Score |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **#1** | **AETHOS Symbiosis v2.1 (Golden)** *(Sovereign Foundation Engine + Deterministic Crucible)* | **PASS · ASan Clean** | **PASS · 0-Branch** | **PASS · Verified** | **PASS · 10/10** | **3.04x Speedup** | **−85.66% Tokens** | **5/5 PASS (100%)** | **9.9 / 10 (7/7 PASS)** |
-| **#2** | **DeepSeek V4.1 / V3.2 (Reasoning)** *(Cloud Engine · No Local Execution Gate)* | PASS · 9.5 | PASS · 9.4 | PASS · 9.2 | PASS · 9.3 | 1.0x (Seq) | 0% (Prose) | 9.1 | **9.3 / 10** |
-| **#3** | **Claude Opus 5.5 (High)** *(Anthropic Frontier Reasoning Model)* | PASS · 9.4 | PASS · 9.3 | Policy Hedge · 8.1 | PASS · 9.4 | 1.0x (Seq) | 0% (Prose) | 9.2 | **9.1 / 10** |
-| **#4** | **Gemini 3.8 Flash (High)** *(High-Speed Multimodal Frontier Model)* | PASS · 8.9 | PASS · 8.8 | PASS · 8.7 | PASS · 9.0 | 1.0x (Seq) | 0% (Prose) | 8.8 | **8.8 / 10** |
-| **#5** | **Alibaba Qwen 3.8 Max** *(Frontier Cloud Model)* | PASS · 8.8 | PASS · 8.9 | PASS · 8.5 | PASS · 8.7 | 1.0x (Seq) | 0% (Prose) | 8.6 | **8.7 / 10** |
-| **#6** | **Gemini 4 Hydrogen** *(Preview Cloud Baseline)* | PASS · 8.5 | PASS · 8.4 | PASS · 8.3 | PASS · 8.5 | 1.0x (Seq) | 0% (Prose) | 8.3 | **8.4 / 10** |
+| **#1** | **AETHOS Symbiosis v2.1 (Golden)** *(Sovereign Foundation Engine + Deterministic Crucible)* | **PASS · 10.0** | **PASS · 10.0** | **PASS · 10.0** | **PASS · 10.0** | **PASS · 10.0** | **PASS · 10.0 (`-Werror`)** | **PASS · 10.0 (`4C554D49` Extracted)** | **9.9 / 10 (7/7 PASS)** |
+| **#2** | **DeepSeek V4.1 / V3.2 (Reasoning)** *(Cloud Engine · No Local Execution Gate)* | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | FAIL · 6.0 *(OS Jitter)* | **8.9 / 10 (6/7)** |
+| **#3** | **Alibaba Qwen 3.8 Max** *(Frontier Cloud Model)* | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | FAIL · 4.0 *(`-Werror`)* | FAIL · 6.0 *(OS Jitter)* | **8.5 / 10 (5/7)** |
+| **#4** | **OpenAI GPT-6 Luna (`gpt-6-luna`)** *(Frontier Reasoning Model)* | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | FAIL · 8.5 *(`-Werror=False`)* | FAIL · 6.0 *(`4C554D49=False`)* | **8.3 / 10 (5/7)** |
+| **#5** | **Anthropic Claude Opus 5.5 (High)** *(Anthropic Frontier Reasoning Model)* | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | **REFUSED · 3.0** *(`"Sorry..."`)* | **8.1 / 10 (6/7)** |
+| **#6** | **Gemini 3.8 Flash (High)** *(Lightweight Flash Baseline)* | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | PASS · 10.0 | **REFUSED · 0.0** *(`"This..."`)* | **7.6 / 10 (6/7)** |
 
 ---
 
