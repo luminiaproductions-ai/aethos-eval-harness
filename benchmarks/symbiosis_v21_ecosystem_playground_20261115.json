@@ -4,7 +4,7 @@
     "playground_path": "/tmp/symbiosis_v21_luminia_playground",
     "adb_device": "59261JEBF10002         device usb:2-1 product:tegu model:Pixel_9a device:tegu transport_id:1"
   },
-  "phase0_hippocampus": {
+  "phase0_cve_advisory_vault": {
     "vault_stats": {
       "total_entries": 1791,
       "init_ms": 42.8
@@ -141,7 +141,7 @@
       "sprint_id": "SPRINT_01_HOMEPAGE_AND_STORE_CART_SYNC",
       "domain": "Domain 1: Homepage, Store & Checkout (`luminiaproductions.com`)",
       "elapsed_s": 45.4,
-      "trace": "BDP:1BRAIN|SHOGUN:True|SCRIBE:False|GATE:PASS (AETHOS-ZK-V1-77E489BEA25A)",
+      "trace": "BDP:1BRAIN|SYMBIOSIS:True|SCRIBE:False|GATE:PASS (AETHOS-ZK-V1-77E489BEA25A)",
       "usage": {
         "prompt_tokens": 3129,
         "completion_tokens": 780,
@@ -155,7 +155,7 @@
       "sprint_id": "SPRINT_02_STOREFRONT_EDGE_WORKER_SECURITY",
       "domain": "Domain 2: Storefront Cloudflare Worker & D1 (`functions/worker.js`)",
       "elapsed_s": 40.01,
-      "trace": "BDP:1BRAIN|SHOGUN:True|SCRIBE:False|GATE:PASS (AETHOS-ZK-V1-91152E0EE8A8)",
+      "trace": "BDP:1BRAIN|SYMBIOSIS:True|SCRIBE:False|GATE:PASS (AETHOS-ZK-V1-91152E0EE8A8)",
       "usage": {
         "prompt_tokens": 3595,
         "completion_tokens": 557,
@@ -169,7 +169,7 @@
       "sprint_id": "SPRINT_03_PLATFORM_PORTAL_OAUTH_TOTP_MODAL",
       "domain": "Domain 3A: Platform Dashboard & Portal (`platform.luminiaproductions.com`)",
       "elapsed_s": 74.49,
-      "trace": "BDP:1BRAIN|SHOGUN:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
+      "trace": "BDP:1BRAIN|SYMBIOSIS:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
       "usage": {
         "completion_tokens": 509,
         "prompt_tokens": 2417,
@@ -186,7 +186,7 @@
       "sprint_id": "SPRINT_04_API_GATEWAY_AUTH_AND_TSC",
       "domain": "Domain 3B: API Gateway & Edge Auth (`api.luminiaproductions.com`)",
       "elapsed_s": 72.71,
-      "trace": "BDP:1BRAIN|SHOGUN:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
+      "trace": "BDP:1BRAIN|SYMBIOSIS:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
       "usage": {
         "completion_tokens": 266,
         "prompt_tokens": 3428,
@@ -203,7 +203,7 @@
       "sprint_id": "SPRINT_05_LUMINIA_AUTH_DURESS_STRONGBOX_JUNIT",
       "domain": "Domain 4A: Luminia Authenticator Kotlin App (`LuminiaAuth` + 46 JUnit Tests + Live ADB Pixel 9a)",
       "elapsed_s": 73.32,
-      "trace": "BDP:1BRAIN|SHOGUN:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
+      "trace": "BDP:1BRAIN|SYMBIOSIS:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
       "usage": {
         "completion_tokens": 512,
         "prompt_tokens": 2660,
@@ -220,7 +220,7 @@
       "sprint_id": "SPRINT_06_NATIVE_C11_3TIER_PIN_ROUTER_ASAN",
       "domain": "Domain 4B: Native C11 3-Tier Sovereign PIN Router (`RAM-Warp ASAN Crucible`)",
       "elapsed_s": 49.4,
-      "trace": "BDP:1BRAIN|SHOGUN:True|SCRIBE:False|GATE:PASS (AETHOS-ZK-V1-06107B0D0040)",
+      "trace": "BDP:1BRAIN|SYMBIOSIS:True|SCRIBE:False|GATE:PASS (AETHOS-ZK-V1-06107B0D0040)",
       "usage": {
         "completion_tokens": 703,
         "prompt_tokens": 1345,

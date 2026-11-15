@@ -9,7 +9,7 @@
       "status": "ok",
       "brain": "aethos-symbiosis-v2",
       "organs": {
-        "shogun_strategist_lobe": true,
+        "symbiosis_strategist_lobe": true,
         "forge_coder_lobe": true,
         "gate_judge_lobe": true,
         "local_edge_scribe_lobe": true
@@ -88,10 +88,10 @@
   "audits": [
     {
       "worker_id": "SWARM_WORKER_01_STOREFRONT_UI",
-      "organ_label": "Shogun-Strategist-Lobe (Slot-0)",
+      "organ_label": "Symbiosis-Strategist-Lobe (Slot-0)",
       "title": "Domain 1: luminiaproductions.com Storefront UI & Multi-Tab Cart State (`store-state.js`)",
       "elapsed_s": 203.57,
-      "trace": "BDP:1BRAIN|SHOGUN:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
+      "trace": "BDP:1BRAIN|SYMBIOSIS:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
       "judge_stamp": "VERIFIED",
       "usage": {
         "completion_tokens": 130,
@@ -105,10 +105,10 @@
     },
     {
       "worker_id": "SWARM_WORKER_02_EDGE_WORKER_D1",
-      "organ_label": "Shogun-Strategist-Lobe (Slot-1)",
+      "organ_label": "Symbiosis-Strategist-Lobe (Slot-1)",
       "title": "Domain 2: luminiaproductions.com Cloudflare Edge Worker & D1 (`functions/worker.js`)",
       "elapsed_s": 202.73,
-      "trace": "BDP:1BRAIN|SHOGUN:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
+      "trace": "BDP:1BRAIN|SYMBIOSIS:True|SCRIBE:False|GATE:BYPASS_TOOL_STEP",
       "judge_stamp": "VERIFIED",
       "usage": {
         "completion_tokens": 107,

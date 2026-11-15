@@ -1,6 +1,6 @@
 {
   "framework": "MITRE ATT&CK Enterprise Matrix v15",
-  "evaluated_system": "AETHOS Symbiosis v2.1 (Unified 1-Brain Sovereign Intelligence)",
+  "evaluated_system": "AETHOS Symbiosis v2.1 (Sovereign Foundation Engine Sovereign Intelligence)",
   "verification_date": "2026-11-05",
   "publisher": "Luminia Sovereign Systems & Research Group",
   "overall_defensive_coverage_pct": 96.8,

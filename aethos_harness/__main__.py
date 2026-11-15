@@ -14,7 +14,7 @@ from . import (
 )
 
 _SAMPLE_PROSE = (
-    "Attention Shogun Strategist Lobe and Forge Coder Lobe: please execute a comprehensive "
+    "Attention Sovereign Analysis Stage and Code Synthesis Stage: please execute a comprehensive "
     "memory safety audit and defensive remediation pass across the C11 lock-free ring buffer "
     "implementation deployed inside the sovereign edge telemetry bridge. You are required to "
     "validate every pointer dereference against null inputs, protect head and tail index "
@@ -29,7 +29,7 @@ _SAMPLE_PROSE = (
     "verify zero memory leaks under repeated stress loops, and compile the final candidate "
     "module inside our volatile RAM-Warp sandbox under GCC C11 with optimization level O3 "
     "and full AddressSanitizer plus UndefinedBehaviorSanitizer instrumentation enabled. "
-    "Coordinate all constraints across the Gate-Judge Lobe and Local Edge Scribe Lobe without "
+    "Coordinate all constraints across the Compiler Verification Gate and Edge Intake Stage without "
     "skipping defensive bounds checks, edge case boundary validation, or compiler error checks, "
     "and emit a deterministic cryptographic AETHOS-ZK-V1 execution attestation upon verifying "
     "clean exit status zero from the compiled binary."

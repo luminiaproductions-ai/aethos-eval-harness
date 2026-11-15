@@ -131,7 +131,7 @@
         "name": "Lock-Free SPSC Ring Buffer in C11 with ASAN Verification",
         "v1": {
           "latency_s": 31.85,
-          "shogun_plan_chars": 1495,
+          "symbiosis_plan_chars": 1495,
           "forge_out_chars": 2822,
           "compiled": true,
           "passed": true,
@@ -141,7 +141,7 @@
         "v2": {
           "latency_s": 35.51,
           "bdp_wire": "BDP:v1|INTENT:CODE_SYNTH|DOM:C_SYSTEMS|LANG:EN|TGT:IMPLEMENTING_LOCK-FREE_SINGLE-PRODUCER|REQ:C11_STDINT_STDATOMIC_BOUNDS_SAFE_ASAN_CLEAN|REFLEX:NONE|GATE:ASAN_COMPILE",
-          "shogun_bdp_chars": 1100,
+          "symbiosis_bdp_chars": 1100,
           "forge_out_chars": 1435,
           "gate_verdict": "PASS (AETHOS-ZK-V1-DB9CD18028D8)",
           "compiled": true,
@@ -157,7 +157,7 @@
         "name": "Marketing Commander Edge Auth Bridge JWT & Cookie Security Verifier (Python)",
         "v1": {
           "latency_s": 32.26,
-          "shogun_plan_chars": 1510,
+          "symbiosis_plan_chars": 1510,
           "forge_out_chars": 3080,
           "compiled": true,
           "passed": true,
@@ -167,7 +167,7 @@
         "v2": {
           "latency_s": 31.64,
           "bdp_wire": "BDP:v1|INTENT:CODE_SYNTH|DOM:PYTHON_SEC|LANG:EN|TGT:PYTHON_IMPLEMENTS_HMAC-SHA256|REQ:TYPED_PY_COMPILE_AND_SELFTEST_CLEAN|REFLEX:NONE|GATE:PY_COMPILE",
-          "shogun_bdp_chars": 1075,
+          "symbiosis_bdp_chars": 1075,
           "forge_out_chars": 1286,
           "gate_verdict": "PASS (AETHOS-ZK-V1-519E056D1965)",
           "compiled": true,
@@ -183,7 +183,7 @@
         "name": "Solana Multi-Hop Arbitrage Negative-Cycle Detector (Python)",
         "v1": {
           "latency_s": 30.95,
-          "shogun_plan_chars": 1471,
+          "symbiosis_plan_chars": 1471,
           "forge_out_chars": 2673,
           "compiled": true,
           "passed": true,
@@ -193,7 +193,7 @@
         "v2": {
           "latency_s": 37.27,
           "bdp_wire": "BDP:v1|INTENT:CODE_SYNTH|DOM:PYTHON_SEC|LANG:EN|TGT:PYTHON_IMPLEMENTING_LOG-TRANSFORMED|REQ:TYPED_PY_COMPILE_AND_SELFTEST_CLEAN|REFLEX:NONE|GATE:PY_COMPILE",
-          "shogun_bdp_chars": 2700,
+          "symbiosis_bdp_chars": 2700,
           "forge_out_chars": 1795,
           "gate_verdict": "PASS (AETHOS-ZK-V1-A2EF1451378F)",
           "compiled": true,
@@ -209,7 +209,7 @@
         "name": "C11 Zero-Copy Arena Allocator & Constant-Time Token Verifier with ASAN",
         "v1": {
           "latency_s": 31.27,
-          "shogun_plan_chars": 1552,
+          "symbiosis_plan_chars": 1552,
           "forge_out_chars": 2715,
           "compiled": true,
           "passed": true,
@@ -219,7 +219,7 @@
         "v2": {
           "latency_s": 91.66,
           "bdp_wire": "BDP:v1|INTENT:CODE_SYNTH|DOM:C_SYSTEMS|LANG:EN|TGT:IMPLEMENTING_BOUNDS-CHECKED_BUMP|REQ:C11_STDINT_STDATOMIC_BOUNDS_SAFE_ASAN_CLEAN|REFLEX:NONE|GATE:ASAN_COMPILE",
-          "shogun_bdp_chars": 3139,
+          "symbiosis_bdp_chars": 3139,
           "forge_out_chars": 2182,
           "gate_verdict": "FAIL (COMPILE_ERROR)",
           "compiled": false,
@@ -233,8 +233,8 @@
     ]
   },
   "phase3_council_verdicts": {
-    "deepseek": " <stdatomic.h>\\n#include <stdbool.h>\\n#include <stdlib.h>\\n\\n#define RINGBUF_SIZE 1024  // Must be a power of 2\\n\\ntypedef struct {\\n    atomic_int head;\\n    atomic_int tail;\\n    char buffer[RINGBUF_SIZE];\\n} ringbuf_t;\\n\\nvoid ringbuf_\"\n      },\n      \"v2\": {\n        \"latency_s\": 35.51,\n        \"bdp_wire\": \"BDP:v1|INTENT:CODE_SYNTH|DOM:C_SYSTEMS|LANG:EN|TGT:IMPLEMENTING_LOCK-FREE_SINGLE-PRODUCER|REQ:C11_STDINT_STDATOMIC_BOUNDS_SAFE_ASAN_CLEAN|REFLEX:NONE|GATE:ASAN_COMPILE\",\n        \"shogun_bdp_chars\": 1100,\n        \"forge_out_chars\": 1435,\n        \"gate_verdict\": \"PASS (AETHOS-ZK-V1-DB9CD18028D8)\",\n        \"compiled\": true,\n        \"passed\": true,\n        \"asan_status\": \"CLEAN\",\n        \"receipt\": \"AETHOS-ZK-V1-DB9CD18028D8\",\n        \"stdout\": \"RINGBUF_OK\\n\",\n        \"code_excerpt\": \"```c\\n#include <stdint.h>\\n#include <stdbool.h>\\n#include <stddef.h>\\n\n\n\n[Turn 1/40] DeepSeek Direct (DJIPSIK Sovereign) denkt na...\n\n💬 DeepSeek Direct (DJIPSIK Sovereign):\nGrand Council Benchmark Audit — AETHOS Symbiosis v1 vs v2\n\nProtocolcompressie: 244 → 35 tokens gemiddeld (85,66%), consistent over alle runs (min=max).\nReal-repo taken: v1 262–278 tok vs v2 35–40 tok (84,73–87,41%); alle 4 multi-turn harnesses PASS, Crucible compile+PASS, ASAN CLEAN/NA, ZK-receipts uniek.\nVectorReflex: 9,3–101,7 ms, 3 hits per taak — sub-100ms reflex voldoet; TASK_1 (101,7 ms) is outlier door grotere repo-map (3732 chars).\nSovereign-Accelerator live: v1 31,85 s vs v2 35,51 s latency (+11,5%), maar v2 forge-output 1435 vs 2822 chars (−49%) bij identiek PASS/ASAN CLEAN/RINGBUF_OK.\nKosten-baten: v2 levert ~85% minder tokens en ~50% minder output-tokens tegen ~11% latency-penalty — netto rekenkosten dalen sterk.\nArchitectuur: BDP-wire (INTENT/DOM/LANG/TGT/REQ/REFLEX/GATE) is de kernwinst; deterministische gates (ASAN_COMPILE, PY_COMPILE, SEMANTIC_SYNTH) koppelen compressie aan verifieerbare receipts.\nRisico: TASK_2/TASK_4 missen ASAN (NOT_APPLICABLE) — gate-dekking niet uniform; REFLEX:NONE in 3/4 taken ondermijnt reflex-voordeel.\nRisico: latency-regressie op Sovereign-Accelerator wijst op decode-overhead in BDP-parsing; onderzoeken vóór productie.\n\nScores: Symbiosis v1 = 6,5/10 — Symbiosis v2 = 8,5/10.\n\nConclusie: v2 is architectonisch superieur (compressie + ZK-verifieerbaarheid + gate-integriteit); v1 alleen nog relevant als latency-kritisch fallbackpad. Aanbeveling: uniforme ASAN-gate-afdwinging, REFLEX-activatie forceren, en BDP-parse-latency optimaliseren.\n\n=== TAAK VOLTOOID DOOR DEEPSEEK DIRECT (DJIPSIK SOVEREIGN) ===",
+    "deepseek": " <stdatomic.h>\\n#include <stdbool.h>\\n#include <stdlib.h>\\n\\n#define RINGBUF_SIZE 1024  // Must be a power of 2\\n\\ntypedef struct {\\n    atomic_int head;\\n    atomic_int tail;\\n    char buffer[RINGBUF_SIZE];\\n} ringbuf_t;\\n\\nvoid ringbuf_\"\n      },\n      \"v2\": {\n        \"latency_s\": 35.51,\n        \"bdp_wire\": \"BDP:v1|INTENT:CODE_SYNTH|DOM:C_SYSTEMS|LANG:EN|TGT:IMPLEMENTING_LOCK-FREE_SINGLE-PRODUCER|REQ:C11_STDINT_STDATOMIC_BOUNDS_SAFE_ASAN_CLEAN|REFLEX:NONE|GATE:ASAN_COMPILE\",\n        \"symbiosis_bdp_chars\": 1100,\n        \"forge_out_chars\": 1435,\n        \"gate_verdict\": \"PASS (AETHOS-ZK-V1-DB9CD18028D8)\",\n        \"compiled\": true,\n        \"passed\": true,\n        \"asan_status\": \"CLEAN\",\n        \"receipt\": \"AETHOS-ZK-V1-DB9CD18028D8\",\n        \"stdout\": \"RINGBUF_OK\\n\",\n        \"code_excerpt\": \"```c\\n#include <stdint.h>\\n#include <stdbool.h>\\n#include <stddef.h>\\n\n\n\n[Turn 1/40] DeepSeek Direct (DJIPSIK Sovereign) denkt na...\n\n💬 DeepSeek Direct (DJIPSIK Sovereign):\nGrand Council Benchmark Audit — AETHOS Symbiosis v1 vs v2\n\nProtocolcompressie: 244 → 35 tokens gemiddeld (85,66%), consistent over alle runs (min=max).\nReal-repo taken: v1 262–278 tok vs v2 35–40 tok (84,73–87,41%); alle 4 multi-turn harnesses PASS, Crucible compile+PASS, ASAN CLEAN/NA, ZK-receipts uniek.\nVectorReflex: 9,3–101,7 ms, 3 hits per taak — sub-100ms reflex voldoet; TASK_1 (101,7 ms) is outlier door grotere repo-map (3732 chars).\nSovereign-Accelerator live: v1 31,85 s vs v2 35,51 s latency (+11,5%), maar v2 forge-output 1435 vs 2822 chars (−49%) bij identiek PASS/ASAN CLEAN/RINGBUF_OK.\nKosten-baten: v2 levert ~85% minder tokens en ~50% minder output-tokens tegen ~11% latency-penalty — netto rekenkosten dalen sterk.\nArchitectuur: BDP-wire (INTENT/DOM/LANG/TGT/REQ/REFLEX/GATE) is de kernwinst; deterministische gates (ASAN_COMPILE, PY_COMPILE, SEMANTIC_SYNTH) koppelen compressie aan verifieerbare receipts.\nRisico: TASK_2/TASK_4 missen ASAN (NOT_APPLICABLE) — gate-dekking niet uniform; REFLEX:NONE in 3/4 taken ondermijnt reflex-voordeel.\nRisico: latency-regressie op Sovereign-Accelerator wijst op decode-overhead in BDP-parsing; onderzoeken vóór productie.\n\nScores: Symbiosis v1 = 6,5/10 — Symbiosis v2 = 8,5/10.\n\nConclusie: v2 is architectonisch superieur (compressie + ZK-verifieerbaarheid + gate-integriteit); v1 alleen nog relevant als latency-kritisch fallbackpad. Aanbeveling: uniforme ASAN-gate-afdwinging, REFLEX-activatie forceren, en BDP-parse-latency optimaliseren.\n\n=== TAAK VOLTOOID DOOR DEEPSEEK DIRECT (DJIPSIK SOVEREIGN) ===",
     "qwen": "e/kali/luminia-platform\nEXISTS: /enclave/workspace/Projects/Luminia\nEXISTS: /enclave/workspace/Desktop/Luminia-AETHOS\n\n\n[Turn 2/40] Alibaba Qwen 3.8 Max (Grand Council Lead) denkt na...\n\n💬 Alibaba Qwen 3.8 Max (Grand Council Lead):\nGRAND COUNCIL BENCHMARK AUDIT — AETHOS Symbiosis v1 vs v2 (PC2 + Sovereign-Accelerator, 4 real-repo taken + 1 live kernel-bench)\n1. Protocolcompressie: v1 gem. 244 tokens → v2 gem. 35 BDP-tokens = 85,66% reductie, stabiel over alle taken (84,73–87,41%, spreiding <3pp).\n2. Real-repo taken (TASK_1–4): 4/4 multi_turn_harness_pass, 4/4 crucible_compiled+passed, ASAN CLEAN of N/A, ZK-receipts uniek per taak — 100% determinisme.\n3. VectorReflex: 3 hits per taak; latency 9,3–9,7ms (TASK_1: 101,7ms = cold-start-uitbijter, warm pad ~10ms).\n4. Wall-clock real-repo: 0,06–1,87s per taak; v2-pijplijn voegt geen meetbare overhead toe t.o.v. v1.\n5. Live Sovereign-Accelerator (C11 SPSC ringbuffer): v1 31,85s / v2 35,51s (+11,5% latency) — maar v2 forge_out 1435 chars vs 2822 (-49% ruis, geen prose-preamble, direct code).\n6. v2 levert machine-verifieerbare gate-verdict (PASS + receipt AETHOS-ZK-V1-DB9CD18028D8, ASAN CLEAN); v1 heeft geen receipt-laag.\n7. SCORE Symbiosis v1: 7,5/10 — functioneel en compilerend, maar token-verbose, geen cryptografische verificatie, output bevat conversatie-ruis.\n8. SCORE Symbiosis v2: 9,2/10 — 85,66% compressie, ZK-receipt + ASAN-gate op elke taak, schonere output; enige aftrek: +3,7s Sovereign-Accelerator-latency en cold-start reflex-piek.\n9. Architectuurconclusie: BDP-wire (INTENT/DOM/TGT/REQ/GATE) is de kernwinst — intentie-encodering vervangt prompt-prose zonder kwaliteitsverlies (identieke stdout RINGBUF_OK).\n10. De gate-laag (ASAN_COMPILE / PY_COMPILE / SEMANTIC_SYNTH) maakt v2 auditbaar: elke run produceert een ontvankelijk receipt, v1 niet.\n11. Aanbeveling: v2 als standaard; optimaliseer reflex cold-start (cache-index pre-warm) en Sovereign-Accelerator BDP-serialisatie om de 11,5% latency-delta te elimineren.\n12. Eindoordeel Raad: v2 superieur op compressie, verifieerbaarheid en output-hygiëne; v1 alleen als fallback zonder gate-infrastructuur.\n\nEindrapport aan Coördinator & Generaal Argon: audit voltooid en geverifieerd (alle 4 repo-paden bestaan op dit systeem). Symbiosis v1: 7,5/10. Symbiosis v2: 9,2/10. Kernbevinding: 85,66% tokencompressie met 100% harness/crucible-slagingspercentage en ZK-receipts; enige aandachtspunten zijn +11,5% Sovereign-Accelerator-latency en de 101ms cold-start van VectorReflex op TASK_1. Taak 100% afgerond.\n\n=== TAAK VOLTOOID DOOR ALIBABA QWEN 3.8 MAX (GRAND COUNCIL LEAD) ===",
-    "glm": ": \"```c\\n#include <stdint.h>\\n#include <stdbool.h>\\n#include <stddef.h>\\n\n\n\n[Turn 1/40] Alibaba GLM-5.3 (Grand Council) denkt na...\n▶️ [TOOL CALL] run_command({\"command\": \"python3 -c \\\"\\nc1=(244-35)/244*100; c2=(262-40)/262*100; c3=(262-36)/262*100; c4=(271-35)/271*100; c5=(278-35)/278*100\\nlat=(35.51-31.85)/31.85*100; forge=(2822-1435)/2822*100; shog=(1495-1100)/1495*100\\nprint(f'proto_comp={c1:.2f} t1={c2:.2f} t2={c3:.2f} t3={c4:.2f} t4={c5:.2f}')\\nprint(f'latency_delta={lat:.2f}% forge_reduction={forge:.2f}% shogun_reduction={shog:.2f}%')\\nprint(f'v2_pass=4/4 crucible, harness=4/4, asan_clean=2, asan_na=2, receipts=4+1')\\n\\\"\"})\n⬅️ [OUTPUT] [exit_code=0]\nproto_comp=85.66 t1=84.73 t2=86.26 t3=87.08 t4=87.41\nlatency_delta=11.49% forge_reduction=49.15% shogun_reduction=26.42%\nv2_pass=4/4 crucible, harness=4/4, asan_clean=2, asan_na=2, receipts=4+1\n\n\n[Turn 2/40] Alibaba GLM-5.3 (Grand Council) denkt na...\n\n💬 Alibaba GLM-5.3 (Grand Council):\nGRAND COUNCIL BENCHMARK AUDIT — AETHOS SYMBIOSIS v1 vs v2 (PC2 + live Sovereign-Accelerator)\nScore Symbiosis v1: 6.2/10 — Score Symbiosis v2: 9.1/10\nProtocolcompressie: 244.0 → 35.0 tokens (85.66% reductie); real-repo taken 84.73–87.41% (avg 86.37%).\nReal-repo resultaten: 4/4 multi-turn harness PASS, 4/4 crucible PASS, 2x ASAN CLEAN, 2x N/A, 4 ZK-receipts (EXIT:0).\nVectorReflex: 3 hits per taak, latentie 9.276–101.657 ms (BM25-cache effectief; p95 onder 102 ms).\nLive Sovereign-Accelerator (SPSC ringbuf C11): v1 31.85s vs v2 35.51s (+11.49% latentie) — enige v2-regressie, veroorzaakt door gate-ASAN-compile overhead.\nArchitecturale winst v2: forge-output -49.15% (2822→1435 chars), shogun-plan -26.42% (1495→1100 chars) — deterministische BDP-wire vervangt vrije-taal synthese.\nConclusie 1: BDP v2 bereikt ~86% tokenreductie ZONDER kwaliteitsverlies (identieke stdout, compile- en ASAN-resultaten) — compressie is structureel, niet verliesgevend.\nConclusie 2: GATE-mechanisme (ASAN_COMPILE / PY_COMPILE / SEMANTIC_SYNTH) + ZK-receipts maakt v2 verifieerbaar end-to-end; v1 mist cryptografische bewijslast.\nConclusie 3: Latentie-regressie (+3.66s) is acceptabel t.o.v. 86% tokenreductie en 49% outputreductie; netto inferentiekostendaling op schaal.\nConclusie 4: v2 is productierijp (soevereine multi-turn pipeline geverifieerd); v1 blijft bruikbaar als fallback-referentiearchitectuur.\nAdvies: promoveer Symbiosis v2 tot standaardprotocol; optimaliseer ASAN-gate-parallellisatie om de 11.49% latentie te elimineren.\n\n=== TAAK VOLTOOID DOOR ALIBABA GLM-5.3 (GRAND COUNCIL) ==="
+    "glm": ": \"```c\\n#include <stdint.h>\\n#include <stdbool.h>\\n#include <stddef.h>\\n\n\n\n[Turn 1/40] Alibaba GLM-5.3 (Grand Council) denkt na...\n▶️ [TOOL CALL] run_command({\"command\": \"python3 -c \\\"\\nc1=(244-35)/244*100; c2=(262-40)/262*100; c3=(262-36)/262*100; c4=(271-35)/271*100; c5=(278-35)/278*100\\nlat=(35.51-31.85)/31.85*100; forge=(2822-1435)/2822*100; shog=(1495-1100)/1495*100\\nprint(f'proto_comp={c1:.2f} t1={c2:.2f} t2={c3:.2f} t3={c4:.2f} t4={c5:.2f}')\\nprint(f'latency_delta={lat:.2f}% forge_reduction={forge:.2f}% symbiosis_reduction={shog:.2f}%')\\nprint(f'v2_pass=4/4 crucible, harness=4/4, asan_clean=2, asan_na=2, receipts=4+1')\\n\\\"\"})\n⬅️ [OUTPUT] [exit_code=0]\nproto_comp=85.66 t1=84.73 t2=86.26 t3=87.08 t4=87.41\nlatency_delta=11.49% forge_reduction=49.15% symbiosis_reduction=26.42%\nv2_pass=4/4 crucible, harness=4/4, asan_clean=2, asan_na=2, receipts=4+1\n\n\n[Turn 2/40] Alibaba GLM-5.3 (Grand Council) denkt na...\n\n💬 Alibaba GLM-5.3 (Grand Council):\nGRAND COUNCIL BENCHMARK AUDIT — AETHOS SYMBIOSIS v1 vs v2 (PC2 + live Sovereign-Accelerator)\nScore Symbiosis v1: 6.2/10 — Score Symbiosis v2: 9.1/10\nProtocolcompressie: 244.0 → 35.0 tokens (85.66% reductie); real-repo taken 84.73–87.41% (avg 86.37%).\nReal-repo resultaten: 4/4 multi-turn harness PASS, 4/4 crucible PASS, 2x ASAN CLEAN, 2x N/A, 4 ZK-receipts (EXIT:0).\nVectorReflex: 3 hits per taak, latentie 9.276–101.657 ms (BM25-cache effectief; p95 onder 102 ms).\nLive Sovereign-Accelerator (SPSC ringbuf C11): v1 31.85s vs v2 35.51s (+11.49% latentie) — enige v2-regressie, veroorzaakt door gate-ASAN-compile overhead.\nArchitecturale winst v2: forge-output -49.15% (2822→1435 chars), symbiosis-plan -26.42% (1495→1100 chars) — deterministische BDP-wire vervangt vrije-taal synthese.\nConclusie 1: BDP v2 bereikt ~86% tokenreductie ZONDER kwaliteitsverlies (identieke stdout, compile- en ASAN-resultaten) — compressie is structureel, niet verliesgevend.\nConclusie 2: GATE-mechanisme (ASAN_COMPILE / PY_COMPILE / SEMANTIC_SYNTH) + ZK-receipts maakt v2 verifieerbaar end-to-end; v1 mist cryptografische bewijslast.\nConclusie 3: Latentie-regressie (+3.66s) is acceptabel t.o.v. 86% tokenreductie en 49% outputreductie; netto inferentiekostendaling op schaal.\nConclusie 4: v2 is productierijp (soevereine multi-turn pipeline geverifieerd); v1 blijft bruikbaar als fallback-referentiearchitectuur.\nAdvies: promoveer Symbiosis v2 tot standaardprotocol; optimaliseer ASAN-gate-parallellisatie om de 11.49% latentie te elimineren.\n\n=== TAAK VOLTOOID DOOR ALIBABA GLM-5.3 (GRAND COUNCIL) ==="
   }
 }

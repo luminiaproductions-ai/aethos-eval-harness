@@ -271,7 +271,7 @@ def test_benchmark_datasets_valid_and_opsec_clean():
         if fn == "symbiosis_v21_swarm_security_audit_20261115.json":
             organs = data["cluster"]["gateway_health"]["organs"]
             assert set(organs.keys()) == {
-                "shogun_strategist_lobe",
+                "symbiosis_strategist_lobe",
                 "forge_coder_lobe",
                 "gate_judge_lobe",
                 "local_edge_scribe_lobe",
